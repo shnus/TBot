@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="VoteBotApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-05T16:56:17" hostname="DESKTOP-TQGOQVD" time="0.0">
+  <properties/>
+  <testcase name="test" classname="VoteBotApplicationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
