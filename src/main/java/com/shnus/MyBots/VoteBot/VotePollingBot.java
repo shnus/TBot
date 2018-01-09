@@ -1,4 +1,4 @@
-package com.shnus.VoteBot;
+package com.shnus.MyBots.VoteBot;
 
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;

@@ -1,6 +1,6 @@
 package com.shnus;
 
-import com.shnus.VoteBot.VotePollingBotRegister;
+import com.shnus.MyBots.VoteBot.VotePollingBot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -9,19 +9,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class VoteBotApplication implements ApplicationRunner {
+public class BotApplication implements ApplicationRunner {
 
     @Autowired
-    private VotePollingBotRegister register;
+    private PollingBotRegister register;
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(VoteBotApplication.class);
+        SpringApplication app = new SpringApplication(BotApplication.class);
         app.setWebEnvironment(false);
         app.run();
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        register.run();
+        register.run(VotePollingBot.class);
     }
 }
