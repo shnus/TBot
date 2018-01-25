@@ -1,15 +1,14 @@
-package com.shnus.MyBots.VoteBot.utils.tokenServices;
+package com.shnus.MyBots.VoteBot.utils.tokenUtils;
 
 public enum  TokenVerificationsStatus {
-    
-    //The format of token is wrong. For example, length.
-    INCORRECT_FORMAT,
 
+    //The format of token is wrong. For example, length.
+    TOKEN_INCORRECT_FORMAT,
 
     //Token format is right, but there is no corresponding vote.
-    NON_EXIST,
+    TOKEN_NON_EXIST,
 
     //Token is correspond to existing voting.
-    EXIST
+    TOKEN_EXIST
 
 }

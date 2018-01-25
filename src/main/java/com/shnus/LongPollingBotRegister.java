@@ -1,6 +1,5 @@
 package com.shnus;
 
-import com.shnus.MyBots.VoteBot.VotePollingBot;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
@@ -12,7 +11,7 @@ import java.util.ResourceBundle;
 
 
 @Component
-public class PollingBotRegister {
+public class LongPollingBotRegister {
 
     private String BOT_TOKEN;
 

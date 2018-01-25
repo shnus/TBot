@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BotApplication implements ApplicationRunner {
 
     @Autowired
-    private PollingBotRegister register;
+    private LongPollingBotRegister register;
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(BotApplication.class);
