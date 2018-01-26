@@ -56,15 +56,15 @@ public class VotePollingBot extends AbilityBot {
 
                         if (voteStatus == VoteStatus.ACTIVE_VOTE) {
                             UserVoteStatus userVoteStatus = VoteService.vote(votes, chatToken, voterOption, curChatId, curUserId, ctx.firstArg());
-                            if(userVoteStatus == UserVoteStatus.SUCCESS_VOTE){
-                                log.info(curUserId+" successfully voted in chat "+curChatId);
-                                sender.send(ctx.user().fullName()+" successfully voted for option "+ctx.firstArg(),ctx.chatId());
-                            } else if(userVoteStatus == UserVoteStatus.ALREADY_VOTED) {
+                            if (userVoteStatus == UserVoteStatus.SUCCESS_VOTE) {
+                                log.info(curUserId + " successfully voted in chat " + curChatId);
+                                sender.send(ctx.user().fullName() + " successfully voted for option " + ctx.firstArg(), ctx.chatId());
+                            } else if (userVoteStatus == UserVoteStatus.ALREADY_VOTED) {
                                 log.info(curUserId + " try to vote in chat " + curChatId + " but already voted");
                                 sender.send(ctx.user().fullName() + " already voted. No tricks here!", ctx.chatId());
                             } else {
-                                log.info(curUserId+" unsuccessfully tryied to vote in chat "+curChatId);
-                                sender.send(ctx.user().fullName()+", option wrong format. Please, try again.",ctx.chatId());
+                                log.info(curUserId + " unsuccessfully tryied to vote in chat " + curChatId);
+                                sender.send(ctx.user().fullName() + ", option wrong format. Please, try again.", ctx.chatId());
                             }
                         } else if (VoteService.isChatOwner(chatUser, curChatId, curUserId)) {
                             log.info(voteStatus.toString());
@@ -81,8 +81,8 @@ public class VotePollingBot extends AbilityBot {
                                 String option;
                                 if ((option = VoteService.verifyArgs(ctx.arguments())) != null) {
                                     sender.send(VoteService.addOption(votes, chatToken, curChatId, option, ctx.user().fullName()), ctx.chatId());
-                                    voteStatus =  VoteService.getStatus(votes, chatToken, curChatId);
-                                    if(voteStatus==VoteStatus.ACTIVE_VOTE) {
+                                    voteStatus = VoteService.getStatus(votes, chatToken, curChatId);
+                                    if (voteStatus == VoteStatus.ACTIVE_VOTE) {
                                         log.info("Vote finally created and in ACTIVE_STATUS by user " + curUserId + " in chat " + curChatId);
                                     } else {
                                         log.info("Waiting for next option from user " + curUserId + " in chat " + curChatId);
@@ -127,10 +127,10 @@ public class VotePollingBot extends AbilityBot {
                             sender.send(VoteService.results(votes, chatToken, curChatId), ctx.chatId());
                         }
                         if (ctx.arguments().length > 0) {
-                            if (VoteService.isTokenExist(votes, ctx.firstArg())== TokenVerificationsStatus.TOKEN_NON_EXIST) {
+                            if (VoteService.isTokenExist(votes, ctx.firstArg()) == TokenVerificationsStatus.TOKEN_NON_EXIST) {
                                 log.info("Trying to create voting with non existing token in chat " + curChatId);
                                 sender.send("Voting with this token not found", ctx.chatId());
-                            } else if(VoteService.isTokenExist(votes, ctx.firstArg())== TokenVerificationsStatus.TOKEN_INCORRECT_FORMAT){
+                            } else if (VoteService.isTokenExist(votes, ctx.firstArg()) == TokenVerificationsStatus.TOKEN_INCORRECT_FORMAT) {
                                 log.info("Trying to create voting with incorrect token in chat " + curChatId);
                                 sender.send("Token format is incorrect", ctx.chatId());
                             } else {
@@ -148,7 +148,6 @@ public class VotePollingBot extends AbilityBot {
                 })
                 .build();
     }
-
 
 
     public Ability results() {
@@ -173,10 +172,10 @@ public class VotePollingBot extends AbilityBot {
                     VoteStatus voteStatus = VoteService.getStatus(votes, chatToken, curChatId);
 
                     if (verifyStatus == VerificationsStatus.SUCCESS && voteStatus == VoteStatus.ACTIVE_VOTE) {
-                        log.info("User "+curUserId+ " from chat " + curChatId + " wants existing voting results.");
+                        log.info("User " + curUserId + " from chat " + curChatId + " wants existing voting results.");
                         sender.send(VoteService.results(votes, chatToken, curChatId), ctx.chatId());
                     } else {
-                        log.info("User "+curUserId+ " from chat " + curChatId + " wants non existing voting results.");
+                        log.info("User " + curUserId + " from chat " + curChatId + " wants non existing voting results.");
                         sender.send("No any active votings in this chat.", ctx.chatId());
                     }
                 })
@@ -204,7 +203,7 @@ public class VotePollingBot extends AbilityBot {
                     if (verifyStatus == VerificationsStatus.WRONG_USER) {
                         log.info("User " + curUserId + " is not the owner of current voting in chat " + curChatId);
                         sender.send("The voting can be deleted only by creator", ctx.chatId());
-                    } else if(verifyStatus == VerificationsStatus.VOTE_NON_EXIST){
+                    } else if (verifyStatus == VerificationsStatus.VOTE_NON_EXIST) {
                         log.info("No voting in chat " + curChatId);
                         sender.send("Don't have any active votings in this chat", ctx.chatId());
                     } else {

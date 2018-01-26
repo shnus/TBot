@@ -9,25 +9,35 @@ import java.util.Map;
 
 public class VoteService {
 
-    public static VoteStatus getStatus(Map<String, Voting> votes, Map<String, String> chatToken, String curChatId) {
+    public static VoteStatus getStatus(
+            Map<String, Voting> votes,
+            Map<String, String> chatToken,
+            String curChatId
+    ) {
         String token = chatToken.get(curChatId);
-        if(token==null) return null;
+        if (token == null) return null;
         Voting voting = votes.get(token);
-        if(voting == null) return null;
+        if (voting == null) return null;
         return voting.getStatus();
     }
 
-    public static boolean isChatOwner(Map<String, String> chatUser, String curChatId, String curUserId) {
+    public static boolean isChatOwner(
+            Map<String, String> chatUser,
+            String curChatId, String curUserId
+    ) {
         String userId = chatUser.get(curChatId);
         return curUserId.compareTo(userId) == 0;
     }
 
-    public static TokenVerificationsStatus isTokenExist(Map<String, Voting> votes, String token) {
-        if(token.length()!=16){
+    public static TokenVerificationsStatus isTokenExist(
+            Map<String, Voting> votes,
+            String token
+    ) {
+        if (token.length() != 16) {
             return TokenVerificationsStatus.TOKEN_INCORRECT_FORMAT;
         }
 
-        if(votes.get(token) == null){
+        if (votes.get(token) == null) {
             return TokenVerificationsStatus.TOKEN_NON_EXIST;
         } else {
             return TokenVerificationsStatus.TOKEN_EXIST;
@@ -42,9 +52,11 @@ public class VoteService {
         }
     }
 
-    public static String addVoteToDb(Map<String, Voting> votes, Map<String, String> chatToken,
-                                     Map<String, String> chatUser, String token, String userName,
-                                     String curChatId, String curUserId){
+    public static String addVoteToDb(
+            Map<String, Voting> votes, Map<String, String> chatToken,
+            Map<String, String> chatUser, String token, String userName,
+            String curChatId, String curUserId
+    ) {
         votes.put(token, new Voting());
         chatToken.put(curChatId, token);
         chatUser.put(curChatId, curUserId);
@@ -57,7 +69,10 @@ public class VoteService {
         return message.toString();
     }
 
-    public static String addQuestion(Map<String, Voting> votes, Map<String, String> chatToken, String curChatId, String question, String userName) {
+    public static String addQuestion(
+            Map<String, Voting> votes, Map<String, String> chatToken,
+            String curChatId, String question, String userName
+    ) {
         String token = chatToken.get(curChatId);
         Voting voting = votes.get(token);
         System.out.println(voting.getStatus());
@@ -70,7 +85,10 @@ public class VoteService {
         return message.toString();
     }
 
-    public static String addOption(Map<String, Voting> votes, Map<String, String> chatToken, String curChatId, String option, String userName) {
+    public static String addOption(
+            Map<String, Voting> votes, Map<String, String> chatToken,
+            String curChatId, String option, String userName
+    ) {
         String token = chatToken.get(curChatId);
         Voting voting = votes.get(token);
         if (option.toLowerCase().compareTo("done") == 0) {
@@ -92,46 +110,53 @@ public class VoteService {
         }
     }
 
-    public static String results(Map<String, Voting> votes, Map<String, String> chatToken, String curChatId) {
+    public static String results(
+            Map<String, Voting> votes,
+            Map<String, String> chatToken,
+            String curChatId
+    ) {
         String token = chatToken.get(curChatId);
         Voting voting = votes.get(token);
         Long sumOfVotes = voting.getOptionsVotesSum();
         StringBuilder result = new StringBuilder();
-        result.append("Token: "+ token+"\n");
-        result.append("Question: "+ voting.getQuestion()+"\n");
+        result.append("Token: " + token + "\n");
+        result.append("Question: " + voting.getQuestion() + "\n");
         Iterator iterator = voting.getIterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             Option option = (Option) iterator.next();
             double percent;
-            if(sumOfVotes==0) {
+            if (sumOfVotes == 0) {
                 percent = 0;
-            }else {
+            } else {
                 percent = (double) option.getVotes() / sumOfVotes * 100;
             }
-            result.append(option.getOrder()+" - ")
-                    .append(option.getVotes()+" votes ")
-                    .append("("+(long)percent+"%) - ")
-                    .append(option.getOption()+"\n");
+            result.append(option.getOrder() + " - ")
+                    .append(option.getVotes() + " votes ")
+                    .append("(" + (long) percent + "%) - ")
+                    .append(option.getOption() + "\n");
         }
         return String.valueOf(result);
     }
 
-    public static UserVoteStatus vote(Map<String, Voting> votes, Map<String, String> chatToken,
-                               Map<String, String> voterOption, String curChatId, String curUserId, String voteId) {
+    public static UserVoteStatus vote(
+            Map<String, Voting> votes, Map<String, String> chatToken,
+            Map<String, String> voterOption, String curChatId,
+            String curUserId, String voteId
+    ) {
         String token = chatToken.get(curChatId);
         Voting voting = votes.get(token);
         int voteNumber;
         try {
             voteNumber = Integer.valueOf(voteId);
-        } catch (NumberFormatException exception){
+        } catch (NumberFormatException exception) {
             return UserVoteStatus.WRONG_NUMBER_FORMAT;
         }
-        if(voteNumber<1 || voteNumber>voting.getOptionsCount()){
+        if (voteNumber < 1 || voteNumber > voting.getOptionsCount()) {
             return UserVoteStatus.WRONG_NUMBER_CONFINES;
         } else {
-            String voteNum = voterOption.get(curUserId+token);
-            if(voteNum==null){
-                voterOption.put(curUserId+token, voteId);
+            String voteNum = voterOption.get(curUserId + token);
+            if (voteNum == null) {
+                voterOption.put(curUserId + token, voteId);
                 voting.vote(voteNumber);
                 votes.put(token, voting);
                 return UserVoteStatus.SUCCESS_VOTE;
@@ -141,8 +166,10 @@ public class VoteService {
         }
     }
 
-    public static String addVoteByToken(Map<String, String> chatToken, Map<String, String> chatUser,
-                                        String token, String userName, String curChatId, String curUserId) {
+    public static String addVoteByToken(
+            Map<String, String> chatToken, Map<String, String> chatUser,
+            String token, String userName, String curChatId, String curUserId
+    ) {
         chatToken.put(curChatId, token);
         chatUser.put(curChatId, curUserId);
         StringBuilder message = new StringBuilder()

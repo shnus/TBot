@@ -1,6 +1,6 @@
 package com.shnus.MyBots.VoteBot.utils.tokenUtils;
 
-public enum  TokenVerificationsStatus {
+public enum TokenVerificationsStatus {
 
     //The format of token is wrong. For example, length.
     TOKEN_INCORRECT_FORMAT,

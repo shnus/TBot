@@ -1,6 +1,6 @@
 package com.shnus.MyBots.VoteBot.utils.voteUtils;
 
-public enum  VerificationsStatus {
+public enum VerificationsStatus {
 
     VOTE_NON_EXIST,
 

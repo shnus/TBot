@@ -8,7 +8,7 @@ public class Option implements Serializable {
     private int votes;
     private int order;
 
-    public Option(String option, int order){
+    public Option(String option, int order) {
         this.option = option;
         this.order = order;
         votes = 0;
@@ -18,7 +18,7 @@ public class Option implements Serializable {
         return option;
     }
 
-    public int getOrder(){
+    public int getOrder() {
         return order;
     }
 
@@ -26,7 +26,7 @@ public class Option implements Serializable {
         return votes;
     }
 
-    public void addVote(){
+    public void addVote() {
         votes++;
     }
 }
