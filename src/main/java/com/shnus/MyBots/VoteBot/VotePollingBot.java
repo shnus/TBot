@@ -121,7 +121,7 @@ public class VotePollingBot extends AbilityBot {
 
                     if (verifyStatus == VerificationsStatus.WRONG_USER) {
                         log.info("User " + curUserId + " is not the owner of current voting in chat " + curChatId);
-                        sender.send("The voting can be created only by owner of current vote - " + ctx.user().fullName(), ctx.chatId());
+                        sender.send("The voting can be created only by owner of current vote", ctx.chatId());
                     } else {
                         if (verifyStatus == VerificationsStatus.SUCCESS_USER) {
                             sender.send(VoteService.results(votes, chatToken, curChatId), ctx.chatId());

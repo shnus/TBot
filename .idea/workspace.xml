@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1e4b3e-3bf3-4399-885e-3500ef2dc54f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/voteBossBot.wal.0" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileContent/fileContent.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.3.1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.3.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/shnus/MyBots/VoteBot/utils/voteUtils/VoteService.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/shnus/MyBots/VoteBot/utils/voteUtils/VoteService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/distributions/TBot.tar" afterPath="$PROJECT_DIR$/build/distributions/TBot.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/distributions/TBot.zip" afterPath="$PROJECT_DIR$/build/distributions/TBot.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/docker/add_1.tar" afterPath="$PROJECT_DIR$/build/docker/add_1.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/TBot.jar" afterPath="$PROJECT_DIR$/build/libs/TBot.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/TBot.jar.original" afterPath="$PROJECT_DIR$/build/libs/TBot.jar.original" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voteBossBot" afterPath="$PROJECT_DIR$/voteBossBot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.shnus.VoteBotApplicationTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.shnus.VoteBotApplicationTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.shnus.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.shnus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.shnus.VoteBotApplicationTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.shnus.VoteBotApplicationTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/VotePollingBot.java" afterPath="$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/VotePollingBot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/utils/voteUtils/VoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/utils/voteUtils/VoteService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -138,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VotePollingBot.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VotePollingBot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/VotePollingBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="59" column="93" lean-forward="true" selection-start-line="59" selection-start-column="93" selection-end-line="59" selection-end-column="93" />
+            <state relative-caret-position="-1701">
+              <caret line="123" column="93" lean-forward="false" selection-start-line="123" selection-start-column="93" selection-end-line="123" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -183,11 +164,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoteService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VoteService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/utils/voteUtils/VoteService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+            <state relative-caret-position="1092">
+              <caret line="135" column="41" lean-forward="false" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1180,8 +1161,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.TBot [buildDocker]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.TBot [bootRun]" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.TBot [bootRun]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.TBot [buildDocker]" />
         <item index="2" class="java.lang.String" itemvalue="Groovy.build" />
         <item index="3" class="java.lang.String" itemvalue="Gradle.TBot [run]" />
         <item index="4" class="java.lang.String" itemvalue="Gradle.TBot [build]" />
@@ -1212,7 +1193,7 @@
       <workItem from="1515689161502" duration="1207000" />
       <workItem from="1516373905326" duration="636000" />
       <workItem from="1516708860084" duration="1615000" />
-      <workItem from="1516718460897" duration="51770000" />
+      <workItem from="1516718460897" duration="53569000" />
     </task>
     <servers />
   </component>
@@ -1225,11 +1206,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79769000" />
+    <option name="totallyTimeSpent" value="81568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-9" width="1860" height="1098" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.50224215" order="7" side_tool="true" content_ui="tabs" />
@@ -1247,7 +1227,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.49775785" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297414" sideWeight="0.49775785" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1675,21 +1655,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/VotePollingBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="59" column="93" lean-forward="true" selection-start-line="59" selection-start-column="93" selection-end-line="59" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/utils/voteUtils/VoteService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+        <state relative-caret-position="1092">
+          <caret line="135" column="41" lean-forward="false" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shnus/MyBots/VoteBot/VotePollingBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1701">
+          <caret line="123" column="93" lean-forward="false" selection-start-line="123" selection-start-column="93" selection-end-line="123" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>
