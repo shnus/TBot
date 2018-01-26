@@ -211,7 +211,7 @@ public class VotePollingBot extends AbilityBot {
                         chatToken.put(curChatId, "null");
                         chatUser.put(curChatId, "null");
                         log.info("Chat: " + curChatId + " deleted voting.");
-                        sender.send("Current voting is successfully deleted", ctx.chatId());
+                        sender.send("Current  voting is successfully deleted", ctx.chatId());
                     }
                 })
                 .build();
