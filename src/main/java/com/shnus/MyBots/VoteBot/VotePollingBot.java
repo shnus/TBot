@@ -64,7 +64,7 @@ public class VotePollingBot extends AbilityBot {
                                 sender.send(ctx.user().fullName() + " already voted. No tricks here!", ctx.chatId());
                             } else {
                                 log.info(curUserId+" unsuccessfully tryied to vote in chat "+curChatId);
-                                sender.send(ctx.user().fullName()+", wrong format option. Please, try again.",ctx.chatId());
+                                sender.send(ctx.user().fullName()+", option wrong format. Please, try again.",ctx.chatId());
                             }
                         } else if (VoteService.isChatOwner(chatUser, curChatId, curUserId)) {
                             log.info(voteStatus.toString());

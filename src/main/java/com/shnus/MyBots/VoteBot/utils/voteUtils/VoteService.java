@@ -126,7 +126,7 @@ public class VoteService {
         } catch (NumberFormatException exception){
             return UserVoteStatus.WRONG_NUMBER_FORMAT;
         }
-        if(voteNumber<1 && voteNumber>voting.getOptionsCount()){
+        if(voteNumber<1 || voteNumber>voting.getOptionsCount()){
             return UserVoteStatus.WRONG_NUMBER_CONFINES;
         } else {
             String voteNum = voterOption.get(curUserId+token);
