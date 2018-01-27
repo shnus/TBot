@@ -1,3 +1,5 @@
 *.properties
 build/
-
+out/
+.gradle/
+.idea/
